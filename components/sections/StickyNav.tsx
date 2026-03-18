@@ -6,6 +6,7 @@ const navLinks = [
   { label: "Pricing", href: "#pricing" },
   { label: "About", href: "#students" },
   { label: "FAQ", href: "#faq" },
+  { label: "Share", href: "/qr", external: false },
 ];
 
 export function StickyNav() {
@@ -40,7 +41,12 @@ export function StickyNav() {
                 href={link.href}
                 className="px-3 py-2 text-sm text-gray-500 hover:text-gray-950 transition-colors"
               >
-                {link.label}
+                {link.label === "Share" ? (
+                  <span className="flex items-center gap-1.5">
+                    <i className="fa-light fa-share-nodes text-xs" aria-hidden="true" />
+                    Share
+                  </span>
+                ) : link.label}
               </a>
             ))}
           </div>
