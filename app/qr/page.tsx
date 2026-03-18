@@ -25,6 +25,15 @@ export default async function QRPage() {
   return (
     <main className="min-h-screen bg-gray-100 flex flex-col items-center justify-center gap-8 p-8 print:bg-white print:p-0 print:gap-0">
 
+      {/* Back link */}
+      <a
+        href="/"
+        className="absolute top-5 left-6 inline-flex items-center gap-2 text-sm text-gray-400 hover:text-gray-950 transition-colors print:hidden"
+      >
+        <i className="fa-regular fa-arrow-left text-xs" aria-hidden="true" />
+        Back to site
+      </a>
+
       {/* Card */}
       <div className="bg-white border-2 border-gray-950 p-10 flex flex-col items-center gap-6 w-full max-w-sm">
 
